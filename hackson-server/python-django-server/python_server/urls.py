@@ -16,7 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import include
+from react import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+        path("", views.react),
+        path("home", views.react),
+        path("workflow", views.react),
+        path("data-visualization", views.react),
+        path("api/", include("apis.rest_api.urls")),
 ]
