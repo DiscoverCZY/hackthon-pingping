@@ -1,4 +1,6 @@
-from databricks_api import databricks_api
+from databricks_api import DatabricksAPI
+
+
 # Provide a host and token
 
 def connect_workspace():

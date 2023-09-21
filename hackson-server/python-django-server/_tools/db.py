@@ -109,9 +109,9 @@ class MySQLClient:
 
 
 connector = MySQLClient(
-    host='111.231.166.157',
+    host='pingpong.mysql.database.azure.com',
     port=3306,
-    user='pingpong_web',
-    password='p!ngpOng~2023',
-    database='pingpong_web'
+    user='pingpong',
+    password='Hackthon@23',
+    database='pingpong'
 )

@@ -5,6 +5,6 @@ urlpatterns = [
         path("workflow/run", workflow_run_views.WorkflowRunView.as_view()),
         # path("chat/", views.ChatModalView.as_view()),
         # path("runquery/", views.RunQueryView.as_view()),
-        # path("workflow/", views.WorkflowModalView.as_view()),
-        # path("workflow/deploy", views.WorkflowDeployView.as_view())
+        path("workflow/", views.WorkflowView.as_view()),
+        path("workflow/deploy/", views.WorkflowDeployView.as_view())
 ]
