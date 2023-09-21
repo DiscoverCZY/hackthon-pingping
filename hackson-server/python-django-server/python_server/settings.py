@@ -18,7 +18,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 HACKSON_SERVER_DIR = Path(BASE_DIR).resolve().parent
 REPO_DIR = Path(HACKSON_SERVER_DIR).resolve().parent
 HACKSON_UI_DIR = f"{REPO_DIR}/hackson-ui"
-HACKSON_UI_BUILD_DIR=f"{HACKSON_UI_DIR}/build"
+HACKSON_UI_BUILD_DIR = f"{HACKSON_UI_DIR}/build"
 
 
 # Quick-start development settings - unsuitable for production
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',
     'rest_framework',
     'apis'
 ]
@@ -133,3 +134,27 @@ STATICFILES_DIRS = (REACT_UI_DICT,)
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+CORS_ALLOW_CREDENTIALS = True
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_WHITELIST = (
+    "http://localhost:8080",
+    "http://localhost:8000",
+    "http://localhost:8081",
+)
+
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_HEADERS = (
+    "accept",
+    "XMLHttpRequest",
+    "X_FILENAME",
+    "accept-encoding",
+    "authorization",
+    "content-type",
+    "dnt",
+    "origin",
+    "user-agent",
+    "x-csrftoken",
+    "x-requested-with",
+    "Pragma",
+    "X-Custom-Header",
+)
