@@ -11,9 +11,14 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+HACKSON_SERVER_DIR = Path(BASE_DIR).resolve().parent
+REPO_DIR = Path(HACKSON_SERVER_DIR).resolve().parent
+HACKSON_UI_DIR = f"{REPO_DIR}/hackson-ui"
+HACKSON_UI_BUILD_DIR=f"{HACKSON_UI_DIR}/build"
 
 
 # Quick-start development settings - unsuitable for production
@@ -37,6 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'apis'
 ]
 
 MIDDLEWARE = [
@@ -54,7 +61,7 @@ ROOT_URLCONF = 'python_server.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, "templates"), HACKSON_UI_BUILD_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -116,6 +123,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+
+REACT_UI_DICT = f"{HACKSON_UI_BUILD_DIR}/static"
+print(f"react ui dist:{REACT_UI_DICT}")
+
+STATICFILES_DIRS = (REACT_UI_DICT,)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
