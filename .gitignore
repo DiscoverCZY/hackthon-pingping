@@ -1,0 +1,13 @@
+*.iml
+**/*.iml
+**/target/**
+.idea/**
+**/log/**
+/bin/
+.project
+**localtest**
+/.vscode
+*.pyc
+**/__pycache__/**
+hackson-server/static
+**/node_modules/**
