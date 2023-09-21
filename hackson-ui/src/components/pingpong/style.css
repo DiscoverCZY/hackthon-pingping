@@ -1,0 +1,144 @@
+
+.pingpong {
+    margin: 0 auto;
+    margin-top: 50px;
+    position: relative;
+    width: 380px;
+    height: 150px;
+  
+    .ping, .pong {
+      position: absolute;
+      top: 30px;
+      opacity: 0;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    .ping {
+      left: -0;
+      color: #1b61af;
+      animation: animPing 3s linear infinite; 
+    }
+    .pong {
+      right: -0;
+      color: #00a2ea;
+      animation: animPing 3s 1.5s linear infinite; 
+    }
+  
+    .c1, .c2 {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+    }
+    .c3, .c4 {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+    }
+    
+    .c1 {
+      top: 0;
+      left: 0;
+      animation: rotateC1 3s linear infinite; 
+    }
+    .c2 {
+      top: 0;
+      left: 80px;
+      animation: rotateC2 3s linear infinite;
+    }
+    .c3 {
+      top: 40px;
+      left: -10px;
+      animation: rotateC3 3s linear infinite;
+    }
+    .c4 {
+      top: 40px;
+      right: -10px;
+      animation: rotateC4 3s linear infinite;
+    }
+    .b1, .b2, .b3, .b4 {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: #eba128;
+      border-radius: 10px;
+    }
+    .b1, .b2 {    
+      top: -5px;
+      left: 145px;
+    }
+    .b3, .b4 {    
+      top: -5px;
+      left: 70px;
+    } 
+  }
+  
+  @keyframes animPing {
+    0% {
+        opacity: 0.8;
+        font-size: 24px;
+    }
+    35%, 100% {
+        opacity: 0;
+        font-size: 48px;
+    }
+  }
+  
+  @keyframes rotateC1 {
+    0% {
+        opacity: 1;
+        transform: rotate(-44deg);  
+    }
+    35% {
+        opacity: 1;
+        transform: rotate(52deg);
+    }
+    36%, 100% {
+        opacity: 0;
+    }
+  }
+  @keyframes rotateC2 {
+    0%, 49% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+        transform: rotate(44deg); 
+    }
+    85% {
+        opacity: 1;
+        transform: rotate(-52deg); 
+    }
+    86%, 100% {
+        opacity: 0;
+    }
+  }
+  @keyframes rotateC3 {
+     0%, 84% {
+        opacity: 0;
+    }
+    85% {
+        opacity: 1;
+        transform: rotate(39deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(-15deg);
+    }
+  }
+  @keyframes rotateC4 {
+    0%, 34% {
+        opacity: 0;
+    }
+    35% {
+        opacity: 1;
+        transform: rotate(-39deg);
+    }
+    50% {
+        opacity: 1;
+        transform: rotate(15deg);
+    }
+    51%, 100% {
+        opacity: 0;
+    }
+  }
+  
