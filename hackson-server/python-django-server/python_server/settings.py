@@ -142,6 +142,16 @@ CORS_ORIGIN_WHITELIST = (
     "http://localhost:8081",
 )
 
+CORS_ALLOW_METHODS = (
+    "DELETE",
+    "GET",
+    "OPTIONS",
+    "PATCH",
+    "POST",
+    "PUT",
+    "VIEW"
+)
+
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_HEADERS = (
     "accept",
