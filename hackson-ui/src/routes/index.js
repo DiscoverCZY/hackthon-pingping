@@ -9,7 +9,7 @@ import Loadable from 'components/Loadable';
 // const Home = Loadable(lazy(() => import('views/home')));
 // const Dashboard = Loadable(lazy(() => import('views/dashboard')));
 // const ChatBot = Loadable(lazy(() => import('views/chatBot')));
-// const Workflow = Loadable(lazy(() => import('views/workflows')));
+const Workflow = Loadable(lazy(() => import('views/workflows')));
 
 // ==============================|| ROUTING RENDER ||============================== //
 
@@ -44,8 +44,7 @@ export default function Routes() {
         },
         {
           path: 'workflow',
-          // element: <Workflow />,
-          element: <div>workflow</div>
+          element: <Workflow />,
         },
         {
           path: '*',

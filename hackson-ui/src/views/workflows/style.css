@@ -1,0 +1,61 @@
+.workflows {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+  }
+  
+  .data-flow {
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+    margin: 0 -8px;
+    border: 1px solid #ddd;
+    .flow {
+      width: 100%;
+      position: relative;
+      /* background-color: antiquewhite; */
+    }
+    .side {
+      border-left: 1px solid #ddd;
+      /* background-color: aqua; */
+      width: 0;
+      transition: linear 500ms;
+      &.open {
+        width: 360px;
+      }
+    }
+    .task {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      .title {
+        /* border-bottom: 1px solid #ddd; */
+        background-color: #009688;
+        color: #fff;
+        margin-bottom: 10px;
+        padding: 8px 12px;
+      }
+      .actions {
+        padding: 8px 12px;
+        text-align: right;
+      }
+      .taskFrom {
+        height: 100%;
+        overflow: auto;
+        padding: 8px 0 8px 12px;
+      }
+    }
+    .workflow {
+      .title {
+        background-color: #1565c0
+      }
+    }
+  
+    .flow {
+      .node-task {
+        background-color: #00acc1;
+        width: 150px;
+        height: 40px;
+      }
+    }
+  }

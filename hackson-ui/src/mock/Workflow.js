@@ -157,7 +157,7 @@ export const WF_TASK_LIST = [
   {
     id: 'c',
     name: 'extract',
-    depends_on: ['b'],
+    depends_on: ['b', 'a'],
     workflow_id: 0
   },
   {
