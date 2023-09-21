@@ -9,3 +9,4 @@ pip install mysql-connector-python3pip install azure-identity azure-keyvault-sec
 pip install langchain langchain_experimental
 pip install databricks-api
 pip install pymysql
+pip install dbutils
